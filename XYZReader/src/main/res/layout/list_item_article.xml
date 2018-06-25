@@ -1,0 +1,64 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/material_component_cards_gap"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--suppress AndroidLintContentDescription -->
+        <com.example.xyzreader.ui.DynamicHeightNetworkImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/photo_placeholder"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/transition_thumbnail"
+            android:adjustViewBounds="true"
+             />
+
+        <TextView
+            android:id="@+id/article_title"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/ltgray"
+            android:paddingLeft="@dimen/material_component_cards_padding"
+            android:paddingRight="@dimen/material_component_cards_padding"
+            android:paddingTop="@dimen/material_component_cards_padding" />
+
+        <TextView
+            android:id="@+id/article_subtitle"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/ltgray"
+            android:paddingLeft="@dimen/material_component_cards_padding"
+            android:paddingRight="@dimen/material_component_cards_padding"
+            android:paddingTop="@dimen/material_component_cards_padding"/>
+
+        <TextView
+            android:id="@+id/article_author"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/ltgray"
+            android:paddingBottom="@dimen/material_component_cards_padding"
+            android:paddingLeft="@dimen/material_component_cards_padding"
+            android:paddingRight="@dimen/material_component_cards_padding" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
